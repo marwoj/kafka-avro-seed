@@ -20,6 +20,6 @@ public class KafkaController {
 
     @PostMapping(value = "/publish")
     public void sendMessageToKafkaTopic(@RequestParam("name") String name, @RequestParam("age") Integer age, @RequestParam("email") String email) {
-        this.producer.sendMessage(new User(name, age, email));
+        this.producer.sendMessage(new User(name, age));
     }
 }
